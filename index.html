@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportZone — Блог о спорте</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link active">Главная</a>
+        <a href="#categories" class="nav__link">Категории</a>
+        <a href="articles.html" class="nav__link">Статьи</a>
+        <a href="#about" class="nav__link">О блоге</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <span class="hero__tag">Топ статья недели</span>
+      <h1 class="hero__title">Как правильно<br>начать тренироваться<br>с нуля</h1>
+      <p class="hero__desc">Полное руководство для новичков: от выбора программы до первых результатов за 30 дней.</p>
+      <a href="article.html" class="btn btn--primary">Читать статью</a>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stat">
+        <strong>128</strong>
+        <span>Статей</span>
+      </div>
+      <div class="stat">
+        <strong>14</strong>
+        <span>Категорий</span>
+      </div>
+      <div class="stat">
+        <strong>50K+</strong>
+        <span>Читателей</span>
+      </div>
+      <div class="stat">
+        <strong>3 года</strong>
+        <span>Опыта</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories section" id="categories">
+    <div class="container">
+      <h2 class="section__title">Категории</h2>
+      <div class="categories__grid">
+        <a href="articles.html?cat=football" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">Футбол</span>
+          <span class="category-card__count">24 статьи</span>
+        </a>
+        <a href="articles.html?cat=fitness" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">Фитнес</span>
+          <span class="category-card__count">31 статья</span>
+        </a>
+        <a href="articles.html?cat=nutrition" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">Питание</span>
+          <span class="category-card__count">19 статей</span>
+        </a>
+        <a href="articles.html?cat=mma" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">MMA / Бокс</span>
+          <span class="category-card__count">17 статей</span>
+        </a>
+        <a href="articles.html?cat=running" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">Бег</span>
+          <span class="category-card__count">22 статьи</span>
+        </a>
+        <a href="articles.html?cat=basketball" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80')">
+          <div class="category-card__overlay"></div>
+          <span class="category-card__name">Баскетбол</span>
+          <span class="category-card__count">15 статей</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section class="articles section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Последние статьи</h2>
+        <a href="articles.html" class="btn btn--outline">Все статьи</a>
+      </div>
+      <div class="articles__grid" id="articles-grid">
+        <!-- JS fills this -->
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BANNER -->
+  <section class="quote-banner">
+    <div class="container">
+      <blockquote class="quote">
+        "Боль, которую ты чувствуешь сегодня, станет силой, которую ты почувствуешь завтра."
+      </blockquote>
+      <cite>— Арнольд Шварценеггер</cite>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__image">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80" alt="О блоге">
+      </div>
+      <div class="about__text">
+        <h2 class="section__title">О блоге</h2>
+        <p>SportZone — это место, где спорт становится образом жизни. Мы пишем о тренировках, питании, мотивации и восстановлении. Наша цель — помочь каждому стать лучшей версией себя.</p>
+        <p>Здесь вы найдёте честные обзоры, научно обоснованные советы и вдохновляющие истории людей, которые выбрали спорт.</p>
+        <a href="articles.html" class="btn btn--primary">Начать читать</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <h2>Получай лучшие статьи на почту</h2>
+      <p>Никакого спама — только полезный контент раз в неделю.</p>
+      <form class="newsletter__form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Твой email" required>
+        <button type="submit" class="btn btn--primary">Подписаться</button>
+      </form>
+      <p class="newsletter__thanks" id="thanks-msg" style="display:none;">Спасибо! Ты в списке.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
+      <p class="footer__copy">&copy; 2026 SportZone. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

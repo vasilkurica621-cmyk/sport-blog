@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статьи — SportZone</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="index.html#categories" class="nav__link">Категории</a>
+        <a href="articles.html" class="nav__link active">Статьи</a>
+        <a href="index.html#about" class="nav__link">О блоге</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Все статьи</h1>
+      <p>Найдите то, что вдохновит вас на движение</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- FILTERS -->
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-cat="all">Все</button>
+        <button class="filter-btn" data-cat="fitness">Фитнес</button>
+        <button class="filter-btn" data-cat="football">Футбол</button>
+        <button class="filter-btn" data-cat="nutrition">Питание</button>
+        <button class="filter-btn" data-cat="mma">MMA / Бокс</button>
+        <button class="filter-btn" data-cat="running">Бег</button>
+        <button class="filter-btn" data-cat="basketball">Баскетбол</button>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Поиск статей...">
+      </div>
+
+      <div class="articles__grid" id="articles-grid"></div>
+      <p class="no-results" id="no-results" style="display:none;">Ничего не найдено. Попробуйте другой запрос.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
+      <p class="footer__copy">&copy; 2026 SportZone. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="articles.js"></script>
+</body>
+</html>
