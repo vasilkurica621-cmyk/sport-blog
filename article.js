@@ -14,18 +14,18 @@ function renderCard(article) {
   return `
     <article class="article-card">
       <a href="article.html?id=${article.id}" class="article-card__img-wrap">
-        <img src="${article.image}" alt="${article.title}" loading="lazy">
+        <img src="${article.image}" alt="${articleField(article, 'title')}" loading="lazy">
         <span class="article-card__cat">${catName(article.category)}</span>
       </a>
       <div class="article-card__body">
         <div class="article-card__meta">
-          <span>${article.date}</span>
+          <span>${articleField(article, 'date')}</span>
           <span>${article.readTime} ${t('read_time')}</span>
         </div>
         <h3 class="article-card__title">
-          <a href="article.html?id=${article.id}">${article.title}</a>
+          <a href="article.html?id=${article.id}">${articleField(article, 'title')}</a>
         </h3>
-        <p class="article-card__excerpt">${article.excerpt}</p>
+        <p class="article-card__excerpt">${articleField(article, 'excerpt')}</p>
         <a href="article.html?id=${article.id}" class="article-card__link">${t('read_more')}</a>
       </div>
     </article>
@@ -36,27 +36,28 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = parseInt(urlParams.get('id')) || 1;
 const article = ARTICLES.find(a => a.id === id) || ARTICLES[0];
 
-document.title = article.title + ' — SportZone';
+document.title = articleField(article, 'title') + ' — SportZone';
 
 const container = document.getElementById('article-content');
 const relatedGrid = document.getElementById('related-grid');
 
 function renderArticle() {
+  document.title = articleField(article, 'title') + ' — SportZone';
   container.innerHTML = `
     <div class="article-hero" style="background-image: url('${article.image}')">
       <div class="article-hero__overlay"></div>
       <div class="container article-hero__content">
         <a href="articles.html?cat=${article.category}" class="article-tag">${catName(article.category)}</a>
-        <h1>${article.title}</h1>
+        <h1>${articleField(article, 'title')}</h1>
         <div class="article-meta">
-          <span>${article.date}</span>
+          <span>${articleField(article, 'date')}</span>
           <span>${article.readTime} ${t('read_time')}</span>
         </div>
       </div>
     </div>
     <div class="container article-body">
       <div class="article-text">
-        ${article.content}
+        ${articleField(article, 'content')}
       </div>
       <div class="article-share">
         <span>${t('share_label')}</span>

@@ -134,6 +134,15 @@ function catName(slug) {
   return t(CAT_KEY[slug] || slug);
 }
 
+function articleField(article, field) {
+  const val = article[field];
+  if (val && typeof val === 'object') {
+    const lang = getLang();
+    return val[lang] || val.uk || '';
+  }
+  return val || '';
+}
+
 function applyTranslations() {
   const lang = getLang();
   document.documentElement.lang = lang;
