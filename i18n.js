@@ -122,7 +122,7 @@ const CAT_KEY = {
 };
 
 function getLang() {
-  return localStorage.getItem('sz_lang') || 'uk';
+  return 'cs';
 }
 
 function t(key) {
