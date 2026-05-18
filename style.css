@@ -111,6 +111,26 @@ ul { list-style: none; }
 .nav__link:hover, .nav__link.active { color: var(--white); }
 .nav__link:hover::after, .nav__link.active::after { transform: scaleX(1); }
 
+/* LANG SWITCHER */
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lang-btn {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 2px 4px;
+  opacity: 0.55;
+  transition: opacity var(--transition), border-color var(--transition);
+}
+.lang-btn:hover { opacity: 0.85; }
+.lang-btn.active { opacity: 1; border-color: var(--red); }
+
 /* BURGER */
 .burger {
   display: none;

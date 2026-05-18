@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Статьи — SportZone</title>
+  <title>Статті — SportZone</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -13,11 +13,17 @@
     <div class="container header__inner">
       <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
       <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link">Главная</a>
-        <a href="index.html#categories" class="nav__link">Категории</a>
-        <a href="articles.html" class="nav__link active">Статьи</a>
-        <a href="index.html#about" class="nav__link">О блоге</a>
+        <a href="index.html"            class="nav__link" data-i18n="nav_home"></a>
+        <a href="index.html#categories" class="nav__link" data-i18n="nav_categories"></a>
+        <a href="articles.html"         class="nav__link active" data-i18n="nav_articles"></a>
+        <a href="index.html#about"      class="nav__link" data-i18n="nav_about"></a>
       </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="uk" onclick="changeLang('uk')">🇺🇦</button>
+        <button class="lang-btn" data-lang="ru" onclick="changeLang('ru')">🇷🇺</button>
+        <button class="lang-btn" data-lang="en" onclick="changeLang('en')">🇬🇧</button>
+        <button class="lang-btn" data-lang="cs" onclick="changeLang('cs')">🇨🇿</button>
+      </div>
       <button class="burger" id="burger" aria-label="Меню">
         <span></span><span></span><span></span>
       </button>
@@ -26,38 +32,36 @@
 
   <div class="page-hero">
     <div class="container">
-      <h1>Все статьи</h1>
-      <p>Найдите то, что вдохновит вас на движение</p>
+      <h1 data-i18n="articles_title"></h1>
+      <p data-i18n="articles_sub"></p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
-      <!-- FILTERS -->
       <div class="filters" id="filters">
-        <button class="filter-btn active" data-cat="all">Все</button>
-        <button class="filter-btn" data-cat="fitness">Фитнес</button>
-        <button class="filter-btn" data-cat="football">Футбол</button>
-        <button class="filter-btn" data-cat="nutrition">Питание</button>
-        <button class="filter-btn" data-cat="mma">MMA / Бокс</button>
-        <button class="filter-btn" data-cat="running">Бег</button>
-        <button class="filter-btn" data-cat="basketball">Баскетбол</button>
+        <button class="filter-btn active" data-cat="all"        data-i18n="cat_all"></button>
+        <button class="filter-btn"        data-cat="fitness"    data-i18n="cat_fitness"></button>
+        <button class="filter-btn"        data-cat="football"   data-i18n="cat_football"></button>
+        <button class="filter-btn"        data-cat="nutrition"  data-i18n="cat_nutrition"></button>
+        <button class="filter-btn"        data-cat="mma"        data-i18n="cat_mma"></button>
+        <button class="filter-btn"        data-cat="running"    data-i18n="cat_running"></button>
+        <button class="filter-btn"        data-cat="basketball" data-i18n="cat_basketball"></button>
       </div>
 
-      <!-- SEARCH -->
       <div class="search-bar">
-        <input type="text" id="search" placeholder="Поиск статей...">
+        <input type="text" id="search" data-i18n-ph="search_ph">
       </div>
 
       <div class="articles__grid" id="articles-grid"></div>
-      <p class="no-results" id="no-results" style="display:none;">Ничего не найдено. Попробуйте другой запрос.</p>
+      <p class="no-results" id="no-results" style="display:none;" data-i18n="no_results"></p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer__inner">
       <a href="index.html" class="logo">SPORT<span>ZONE</span></a>
-      <p class="footer__copy">&copy; 2026 SportZone. Все права защищены.</p>
+      <p class="footer__copy">&copy; 2026 SportZone. <span data-i18n="footer_copy"></span></p>
       <div class="footer__links">
         <a href="#">Instagram</a>
         <a href="#">YouTube</a>
@@ -66,6 +70,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="data.js"></script>
   <script src="articles.js"></script>
 </body>
